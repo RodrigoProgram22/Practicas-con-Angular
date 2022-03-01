@@ -1,4 +1,42 @@
 <app-header></app-header>
-<p>Start editing to see some magic happen :) hola</p>
-<h1>Hola mundo</h1>
+<p>Numeros {{ 90 + 90 }}</p>
+<h1>{{ helloWord() }}</h1>
+<h2>PI {{ pi | number: "1.1-2" }}</h2>
 <app-entrada-input></app-entrada-input>
+<div *ngFor="let n of numeros">
+  <p>Los numeros son {{ n }}</p>
+</div>
+
+<div class="ArgPrograma">
+  <h2>Uso de *ngIf</h2>
+  <p>
+    La el valor de identidad_secreta es: <b>{{ revelar_identidad }}</b>
+  </p>
+  <p>
+    entonces Ironman es <span *ngIf="revelar_identidad">{{ ironman }}</span>
+  </p>
+
+  <div *ngIf="revelar_identidad; then no_secreto; else secreto"></div>
+  <ng-template #secreto><p>¿Quien es IronMan?...</p></ng-template>
+  <ng-template #no_secreto
+    ><p>{{ ironman }}</p></ng-template
+  >
+
+  <h2>Uso de *ngFor con *ngSwitch</h2>
+  <p>Las armaduras usadas por IronMan son:</p>
+  <ul [ngSwitch]="usar">
+    <li *ngFor="let armadura of armaduras">
+      {{ armadura }} <b *ngSwitchCase="1"></b>
+    </li>
+  </ul>
+
+  <h2>Uso de *ngSwitch con *ngSwitch</h2>
+  <ul [ngSwitch]="superhero">
+    <li *ngSwitchCase="'Groot'">Groot</li>
+    <!-- <li *ngSwitchCase="'Ironman'">Ironman</li> -->
+    <li *ngSwitchCase="'Hulk'">Hulk</li>
+    <li *ngSwitchCase="'Thor'">Thor</li>
+    <li *ngSwitchCase="'Spiderman'">Spiderman</li>
+    <li *ngSwitchDefault>Batman</li>
+  </ul>
+</div>
