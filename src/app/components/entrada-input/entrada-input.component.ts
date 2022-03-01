@@ -10,9 +10,3 @@ export class EntradaInputComponent implements OnInit {
 
   ngOnInit(): void {}
 }
-
-// function enviar() {
-//   let nombre = document.getElementById('inputId');
-//   let div = document.getElementById('divId') as HTMLSelectElement;
-//   div.innerHTML = 'Tu nombre es ' + nombre;
-// }

@@ -4,3 +4,10 @@ p {
 h1 {
   color: red;
 }
+.click {
+  padding: 5px;
+  border-style: solid;
+  border-color: aqua;
+  max-width: fit-content;
+  cursor: pointer;
+}
