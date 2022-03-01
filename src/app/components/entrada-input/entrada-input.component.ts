@@ -9,4 +9,11 @@ export class EntradaInputComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+  nombre: string = '';
+  telefono = '';
+  dni = '';
+
+  onClick() {
+    alert('Hiciste click!!');
+  }
 }
