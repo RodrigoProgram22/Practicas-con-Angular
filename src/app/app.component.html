@@ -1,10 +1,26 @@
 <app-header></app-header>
+
 <!-- <p>Numeros {{ 90 + 90 }}</p> -->
 <!-- <app-entrada-input></app-entrada-input> -->
-<div>
+
+<!-- <div>
   <h1>Personajes</h1>
   <div *ngFor="let personaje of personajes">
     <p>{{ personaje.id }}</p>
     <p>{{ personaje.name }}</p>
   </div>
-</div>
+</div> -->
+
+<p class="app-component">
+  Soy AppComponent y como el router-outlet esta dentro mio, este componente no
+  cambiará si modificas la ruta!
+</p>
+<ul>
+  <li><a routerLink="/body">Ir a Body</a></li>
+  <li><a routerLink="/header">Ir a Header</a></li>
+  <li><a routerLink="/titulo">Ir a Titulo</a></li>
+  <li><a routerLink="/input">Ir a Input</a></li>
+  <li><a routerLink="/rick">Ir a Rick And Morty</a></li>
+  <li><a routerLink="/dragon">Ir a Dragonball</a></li>
+</ul>
+<router-outlet></router-outlet>

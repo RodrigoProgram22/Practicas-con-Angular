@@ -9,14 +9,32 @@ import { EntradaInputComponent } from './components/entrada-input/entrada-input.
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { AppRouting } from './app-routing.module';
+import { BodyComponent } from './components/body/body.component';
+import { RickAndMortyComponent } from './components/rick-and-morty/rick-and-morty.component';
+import { DragonballComponent } from './components/dragonball/dragonball.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TituloComponent,
     EntradaInputComponent,
+    BodyComponent,
+    RickAndMortyComponent,
+    DragonballComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRouting,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

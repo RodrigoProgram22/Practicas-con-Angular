@@ -6,12 +6,13 @@ import { PersonajesService } from './services/personajes.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  //  >Codigo para la API<
   personajes: any = [];
   constructor(private service: PersonajesService) {}
   ngOnInit(): void {
     this.service.getAllPersonajes().subscribe((resp) => {
       this.personajes = resp.results;
-      console.log(this.personajes);
+      // console.log(this.personajes);
     });
   }
 }
