@@ -1,0 +1,29 @@
+<div>
+  <form [formGroup]="form" (submit)="send()">
+    <div>
+      <label for="user">User: </label>
+      <input type="text" id="user" formControlName="user" />
+    </div>
+    <br />
+    <div>
+      <label for="email">Email: </label>
+      <input type="text" id="email" formControlName="email" />
+    </div>
+    <br />
+    <div>
+      <label for="Password">Password: </label>
+      <input type="password" id="password" formControlName="password" />
+    </div>
+    <br />
+    <div>
+      <input type="checkbox" id="password" formControlName="terms" />
+      <label for="terms">Acepta Terminos y Condiciones.</label>
+    </div>
+    <br />
+    <div>
+      <button [disabled]="form.invalid">Send</button>
+    </div>
+  </form>
+</div>
+<br />
+<div>Valido: {{ form.valid | json }}</div>
